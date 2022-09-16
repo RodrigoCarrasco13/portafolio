@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -16,9 +16,9 @@
     <header>
         <div class="contenedor">
             <nav class="menu">
-                <a href="">Acerca de</a>
-                <a href="">Trabajos</a>
-                <a href="">Contacto</a>
+                <a id="acercade" href="">Acerca de</a>
+                <a id="experiencia" href="">Experiencia</a>
+                <a id="contacto" href="">Contacto</a>
             </nav>
             <div class="contenedor-texto">
                 <div class="texto">
@@ -37,13 +37,19 @@
                 </div>
                 <div class="texto">
                     <h3 class="titulo">Acerca de</h3>
-                    <p>Mi nombre es <span class="bold">Rodrigo, 22 años chileno</span> y me dedico a estudiar <span class="bold">ingenieria informatica</span> en el instituto profesional <span class="bold">Virginio Gomez.</span> Desarrollo paginas web utilizando <span class="bold"> Html, Css y JavaScript</span>, ademas de otras herramientas, actualmente estoy aprendiendo Angular y ReactJS.</p>
+                    <p>
+                        Mi nombre es <span class="bold">Rodrigo, 22 años chileno</span> 
+                        y me dedico a estudiar <span class="bold">ingenieria informatica</span>
+                        en el instituto profesional <span class="bold">Virginio Gomez.</span> 
+                        Desarrollo paginas web utilizando <span class="bold"> Html, Css y JavaScript</span>, 
+                        ademas de otras herramientas, actualmente estoy aprendiendo Angular y ReactJS.
+                    </p>
                 </div>
             </div>
         </section>
         <section class="trabajos">
             <div class="contenedor">
-                <h3 class="titulo">Trabajos</h3>
+                <h3 class="titulo">Experiencia</h3>
                 <div class="contenedor-trabajos">
                     <div class="trabajo">
                         <div class="thumb">
@@ -75,6 +81,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="herramientas">
+                    <h3 class="titulo">Herramientas</h3>
+                    <div class="iconos">
+                        <i class="fa-brands fa-html5" id="html"></i>
+                        <i class="fa-brands fa-css3-alt" id="css"></i>
+                        <i class="fa-brands fa-js" id="js"></i>
+                        <i class="fa-brands fa-sass" id="sass"></i>
+                        <i class="fa-brands fa-bootstrap" id="bootstrap"></i>
+                        <i class="fa-brands fa-figma" id="figma"></i>
+                        <i class="fa-brands fa-git-alt" id="git"></i>
+                    </div>
+                </div>
             </div>
         </section>
     </section>
@@ -93,11 +111,17 @@
         </section>
         <section class="redes-sociales">
             <div class="contenedor">
-                <a class="youtube" href="#"><i class="fa fa-youtube-play"></i></a>
-                <a class="github" href="#"><i class="fa fa-github"></i></a>
-                <a class="instagram" href="#"><i class="fa fa-instagram"></i></a>
+                <a class="linkedin" href="www.linkedin.com/in/rodrigo-carrasco-6a3599250"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="github" href="https://github.com/RodrigoCarrasco13"><i class="fa-brands fa-github"></i></a>
+                <a class="instagram" href="https://www.instagram.com/sr.browen/"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </section>
     </footer>
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fa-solid fa-hand-point-up"></i>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
 </body>
 </html>

@@ -8,6 +8,15 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
+body::-webkit-scrollbar{
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:#291157;
+}
+body::-webkit-scrollbar-track-piece{
+    background-color: #cecece;
+}
 .contenedor{
     width: 90%;
     max-width: 1000px;
@@ -174,6 +183,37 @@ header .contenedor-texto .texto .profesion{
     color: #636363;
 }
 
+.main .trabajos .herramientas{
+    text-align: center;
+}
+
+.main .trabajos .herramientas i{
+    padding: 0 20px;
+    color: #291157;
+    font-size: 50px;
+}
+
+.main .trabajos .herramientas #html:hover{
+    color: #e34f26;
+}
+.main .trabajos .herramientas #css:hover{
+    color: #0099e5;
+}
+.main .trabajos .herramientas #js:hover{
+    color: #f7df1e;
+}
+.main .trabajos .herramientas #sass:hover{
+    color: #ff4f81;
+}
+.main .trabajos .herramientas #bootstrap:hover{
+    color: #7d3f98;
+}
+.main .trabajos .herramientas #figma:hover{
+    color: #0abf53;
+}
+.main .trabajos .herramientas #git:hover{
+    color: #e24329;
+}
 /*--footer--*/
 
 footer .contacto{
@@ -258,19 +298,77 @@ footer .redes-sociales a{
     width: 100px;
     display: block;
     padding: 15px 0;
-    border-radius: 3px;
+    border-radius: 6px;
     font-size: 30px;
     margin: 0 20px;
 }
 
-footer .redes-sociales .youtube:hover{
-    background: #cd201f;
+footer .redes-sociales .linkedin:hover{
+    background: #0077b5;
 }
 footer .redes-sociales .github:hover{
     background: #666666;
 }
 footer .redes-sociales .instagram:hover{
     background: #c13584;
+}
+
+/*--go-top--*/
+
+.go-top-container{
+    position: fixed;
+    bottom:40px;
+    right: 40px;
+    width: 66px;
+    height: 66px;
+    z-index: -1;
+}
+.go-top-button{
+    width: 0px;
+    height: 0px;
+    background: #45287B;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.go-top-button i{
+    position: absolute;
+    font-size: 17px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    color: white;
+    transition: .2s;
+}
+.show{
+    z-index: 10;
+}
+.show .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 66px;
+    height: 66px;
+    z-index: 11;
+}
+.show i{
+    transform: translate(-50%, -50%)scale(1);
+}
+@keyframes popup{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    50%{
+        width: 8px;
+        height: 8px;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /*--media queri--*/
@@ -281,6 +379,17 @@ footer .redes-sociales .instagram:hover{
     }
     .main .trabajos .contenedor-trabajos .trabajo{
         width: 46%;
+    }
+    .main .trabajos .herramientas{
+        font-size: 40px;
+    }
+    
+    .main .trabajos .herramientas i{
+        padding: 0 20px;
+    }
+    .go-top-container{
+        bottom:10px;
+        right: 10px;
     }
 }
 
@@ -294,5 +403,16 @@ footer .redes-sociales .instagram:hover{
     footer .redes-sociales .contenedor{
         flex-wrap: wrap;
         padding: 20px 0;
+    }
+    .main .trabajos .herramientas{
+        font-size: 30px;
+    }
+    
+    .main .trabajos .herramientas i{
+        padding: 0 10px;
+    }
+    .go-top-container{
+        bottom:5px;
+        right: 5px;
     }
 }
